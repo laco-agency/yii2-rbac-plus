@@ -79,7 +79,7 @@ Ok. That's done. Avaiable route now:
         'userModelIdField'=>'id',
         'userModelLoginField'=>'username',
         'userModelLoginFieldLabel'=>null,
-        'userModelExtraDataColumls'=>null,
+        'userModelExtraDataColumns'=>null,
         'beforeCreateController'=>null,
         'beforeAction'=>null
     ]       
@@ -94,10 +94,10 @@ Ok. That's done. Avaiable route now:
  Default login field is 'username'. Maybe you use email field or something other for login. So you must change this config
 + <b>userModelLoginFieldLabel</b> The user model login field label.<br>
  If you set null the label will get from `$userModelClass->attributeLabels()[$userModelLoginField]`
-+ <b>userModelExtraDataColumls</b> The extra data columns you want to show in user assign views.<br>
++ <b>userModelExtraDataColumns</b> The extra data columns you want to show in user assign views.<br>
  The default in assignment data gridview just display id and login column data. if you want to add created_at column you can add
 ````php 
-'userModelExtraDataColumls'=>[
+'userModelExtraDataColumns'=>[
     [
         'attributes'=>'created_at',
         'value'=>function($model){

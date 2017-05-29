@@ -43,10 +43,10 @@ class Module extends BaseModule {
 
     /**
      *
-     * @var array|null $userModelExtraDataColumks the array of extra colums of user model want to show in
+     * @var array|null $userModelExtraDataColumns the array of extra columns of user model want to show in
      * assignment index view. 
      */
-    public $userModelExtraDataColumls;
+    public $userModelExtraDataColumns;
 
     /**
      * Callback before create controller
@@ -56,12 +56,12 @@ class Module extends BaseModule {
 
     /**
      * Callback before create action
-     * @var type 
+     * @var $beforeAction
      */
     public $beforeAction = null;
 
     /**
-     * Initilation module
+     * Initializing the module
      * @return void
      */
     public function init() {
@@ -70,7 +70,7 @@ class Module extends BaseModule {
             if (Yii::$app->has('user')) {
                 $this->userModelClassName = Yii::$app->user->identityClass;
             } else {
-                throw new yii\base\Exception("You must config user compoment both console and web config");
+                throw new yii\base\Exception("You must config user component both console and web config");
             }
         }
         if ($this->userModelLoginFieldLabel == null) {
@@ -92,5 +92,4 @@ class Module extends BaseModule {
         }
         return parent::beforeAction($action);
     }
-
 }

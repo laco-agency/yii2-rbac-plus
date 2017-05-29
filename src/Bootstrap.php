@@ -21,7 +21,7 @@ class Bootstrap implements BootstrapInterface {
         // Set alias for extension source
         Yii::setAlias("@rbacplus", __DIR__);
 
-        // Setup i18n compoment for translate all category user*
+        // Setup i18n component for translate all category user*
         if (!isset(Yii::$app->get('i18n')->translations['rbac*'])) {
             Yii::$app->get('i18n')->translations['rbac*'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
@@ -29,5 +29,4 @@ class Bootstrap implements BootstrapInterface {
             ];
         }
     }
-
 }

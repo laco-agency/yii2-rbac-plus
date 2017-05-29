@@ -4,8 +4,7 @@ use yii\widgets\ActiveForm;
 
 $rules = Yii::$app->authManager->getRules();
 $rulesNames = array_keys($rules);
-$rulesDatas = array_merge([''=>Yii::t('rbac','(not use)')],array_combine($rulesNames,$rulesNames));        
-         
+$rulesDatas = array_merge(['' => Yii::t('rbac', '(not use)')], array_combine($rulesNames, $rulesNames));
 ?>
 
 <div class="auth-item-form">
@@ -25,5 +24,5 @@ $rulesDatas = array_merge([''=>Yii::t('rbac','(not use)')],array_combine($rulesN
     <?php } ?>
 
     <?php ActiveForm::end(); ?>
-    
+
 </div>
